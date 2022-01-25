@@ -1,0 +1,203 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Temperature:LM35-LP U1
+U 1 1 603537C0
+P 3150 2750
+F 0 "U1" H 2821 2796 50  0000 R CNN
+F 1 "LM35-LP" H 2821 2705 50  0000 R CNN
+F 2 "Package_TO_SOT_THT:TO-92" H 3200 2500 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm35.pdf" H 3150 2750 50  0001 C CNN
+	1    3150 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2300 3150 2300
+Wire Wire Line
+	3150 2300 3150 2450
+Wire Wire Line
+	3150 3900 3150 3050
+Wire Wire Line
+	3550 2750 3750 2750
+Wire Wire Line
+	3750 2750 3750 2000
+Wire Wire Line
+	3750 2000 4700 2000
+Wire Wire Line
+	4700 2000 4700 2600
+Text Notes 2700 950  0    129  ~ 0
+Esquema  Wemos - Mpu6050 - Lm35
+$Comp
+L Connector:Screw_Terminal_01x08 J1
+U 1 1 60356F81
+P 5850 2800
+F 0 "J1" H 5930 2792 50  0000 L CNN
+F 1 "MPU-6050" H 5930 2701 50  0000 L CNN
+F 2 "TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x08_P3.50mm_Horizontal" H 5850 2800 50  0001 C CNN
+F 3 "~" H 5850 2800 50  0001 C CNN
+	1    5850 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 2300 4200 2200
+Wire Wire Line
+	4200 2200 5650 2200
+Wire Wire Line
+	5650 2200 5650 2500
+Wire Wire Line
+	5450 2600 5450 3900
+Connection ~ 4200 2300
+Connection ~ 4300 3900
+Wire Wire Line
+	5450 3900 4300 3900
+Wire Wire Line
+	4700 2750 4700 2800
+$Comp
+L MCU_Module:WeMos_D1_mini U2
+U 1 1 60352504
+P 4300 3100
+F 0 "U2" H 4300 2211 50  0000 C CNN
+F 1 "WeMos_D1_mini" H 4300 2120 50  0000 C CNN
+F 2 "Module:WEMOS_D1_mini_light" H 4300 1950 50  0001 C CNN
+F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H 2450 1950 50  0001 C CNN
+	1    4300 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2800 5050 2800
+Wire Wire Line
+	5050 2800 5050 2700
+Wire Wire Line
+	5050 2700 5650 2700
+Connection ~ 4700 2800
+Wire Wire Line
+	4700 2900 5250 2900
+Wire Wire Line
+	5250 2900 5250 2800
+Wire Wire Line
+	5250 2800 5650 2800
+$Comp
+L Device:LED D1
+U 1 1 6035F4EC
+P 4950 1650
+F 0 "D1" H 4943 1867 50  0000 C CNN
+F 1 "LED" H 4943 1776 50  0000 C CNN
+F 2 "LED_THT:LED_D1.8mm_W3.3mm_H2.4mm" H 4950 1650 50  0001 C CNN
+F 3 "~" H 4950 1650 50  0001 C CNN
+	1    4950 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 603606D0
+P 5600 1650
+F 0 "D2" H 5593 1867 50  0000 C CNN
+F 1 "LED" H 5593 1776 50  0000 C CNN
+F 2 "LED_THT:LED_D1.8mm_W3.3mm_H2.4mm" H 5600 1650 50  0001 C CNN
+F 3 "~" H 5600 1650 50  0001 C CNN
+	1    5600 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 603611D6
+P 6200 1650
+F 0 "D3" H 6193 1867 50  0000 C CNN
+F 1 "LED" H 6193 1776 50  0000 C CNN
+F 2 "LED_THT:LED_D1.8mm_W3.3mm_H2.4mm" H 6200 1650 50  0001 C CNN
+F 3 "~" H 6200 1650 50  0001 C CNN
+	1    6200 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60362E71
+P 5100 1800
+F 0 "R1" H 5170 1846 50  0000 L CNN
+F 1 "R" H 5170 1755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5030 1800 50  0001 C CNN
+F 3 "~" H 5100 1800 50  0001 C CNN
+	1    5100 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6036370D
+P 5750 1800
+F 0 "R2" H 5820 1846 50  0000 L CNN
+F 1 "R" H 5820 1755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5680 1800 50  0001 C CNN
+F 3 "~" H 5750 1800 50  0001 C CNN
+	1    5750 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 60363D49
+P 6350 1800
+F 0 "R3" H 6420 1846 50  0000 L CNN
+F 1 "R" H 6420 1755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6280 1800 50  0001 C CNN
+F 3 "~" H 6350 1800 50  0001 C CNN
+	1    6350 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 1650 6050 1300
+Wire Wire Line
+	6050 1300 5450 1300
+Wire Wire Line
+	2550 1300 2550 3900
+Wire Wire Line
+	2550 3900 3150 3900
+Connection ~ 3150 3900
+Wire Wire Line
+	3150 3900 4300 3900
+Wire Wire Line
+	4800 1650 4800 1300
+Connection ~ 4800 1300
+Wire Wire Line
+	4800 1300 2550 1300
+Wire Wire Line
+	5450 1650 5450 1300
+Connection ~ 5450 1300
+Wire Wire Line
+	5450 1300 4800 1300
+Wire Wire Line
+	5650 2600 5450 2600
+Wire Wire Line
+	5100 1950 5100 2500
+Wire Wire Line
+	5100 2500 4850 2500
+Wire Wire Line
+	4850 2500 4850 2700
+Wire Wire Line
+	4850 2700 4700 2700
+Wire Wire Line
+	4700 3000 5400 3000
+Wire Wire Line
+	5400 3000 5400 1950
+Wire Wire Line
+	5400 1950 5750 1950
+Wire Wire Line
+	5300 3100 5300 2050
+Wire Wire Line
+	5300 2050 6350 2050
+Wire Wire Line
+	6350 2050 6350 1950
+Wire Wire Line
+	4700 3100 5300 3100
+$EndSCHEMATC
